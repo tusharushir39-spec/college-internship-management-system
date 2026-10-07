@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+.navbar {
+    background: #1e3a8a;
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 80px;
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #eff6ff
+    );
+}
+
+.hero-text {
+    max-width: 620px;
+}
+
+.hero-text h1 {
+    font-size: 46px;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.hero-text h2 {
+    font-size: 27px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #1e3a8a;
+    color: white;
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #222;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.hero-box {
+    width: 400px;
+    height: 280px;
+    background: #dbeafe;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.12);
+}
+
+.hero-box h2 {
+    color: #1e3a8a;
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.features {
+    padding: 65px 80px;
+    text-align: center;
+}
+
+.features > h2 {
+    font-size: 32px;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.features > p {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    width: 280px;
+    padding: 30px 22px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.25s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: #1e3a8a;
+    font-size: 20px;
+}
+
+.feature-card h2 {
+    color: #1e3a8a;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.feature-card strong {
+    color: #333;
+}
+
+form {
+    max-width: 450px;
+    margin: 25px auto;
+}
+
+input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+form .btn {
+    margin-top: 5px;
+}
+
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 18px 25px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 25px;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-box {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .features {
+        padding: 50px 25px;
+    }
+
+}

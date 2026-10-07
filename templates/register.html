@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Internship Portal</div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/login">Student Login</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Student Registration</h1>
+
+            <p>Create your student account to apply for internships.</p>
+
+            <form method="POST" action="/register">
+
+                <input type="text" name="full_name" placeholder="Full Name" required>
+                <br><br>
+
+                <input type="email" name="email" placeholder="Email Address" required>
+                <br><br>
+
+                <input type="text" name="college_name" placeholder="College Name" required>
+                <br><br>
+
+                <input type="text" name="course" placeholder="Course" required>
+                <br><br>
+
+                <input type="password" name="password" placeholder="Create Password" required>
+                <br><br>
+
+                <button type="submit" class="btn btn-primary">
+                    Register
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

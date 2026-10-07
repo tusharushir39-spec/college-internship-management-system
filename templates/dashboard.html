@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Internship Portal
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/internships">Internships</a>
+            <a href="/my-applications">My Applications</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <section class="features">
+
+        <h2>Welcome, {{ student[1] }}! 🎓</h2>
+
+        <p>Your Student Dashboard</p>
+
+
+        <div class="feature-container">
+
+
+            <div class="feature-card">
+
+                <h3>👤 My Profile</h3>
+
+                <p>
+                    <strong>Name:</strong>
+                    {{ student[1] }}
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    {{ student[2] }}
+                </p>
+
+                <p>
+                    <strong>College:</strong>
+                    {{ student[3] }}
+                </p>
+
+                <p>
+                    <strong>Course:</strong>
+                    {{ student[4] }}
+                </p>
+
+            </div>
+
+
+            <a href="/internships" style="text-decoration: none; color: inherit;">
+
+                <div class="feature-card">
+
+                    <h3>🔍 Available Internships</h3>
+
+                    <p>
+                        Explore internship opportunities
+                        available for students.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="/internships" style="text-decoration: none; color: inherit;">
+
+                <div class="feature-card">
+
+                    <h3>📝 Apply for Internship</h3>
+
+                    <p>
+                        Apply for suitable internship
+                        opportunities.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="/my-applications" style="text-decoration: none; color: inherit;">
+
+                <div class="feature-card">
+
+                    <h3>📋 My Applications</h3>
+
+                    <p>
+                        View all your submitted
+                        internship applications.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="/my-applications" style="text-decoration: none; color: inherit;">
+
+                <div class="feature-card">
+
+                    <h3>📊 Application Status</h3>
+
+                    <p>
+                        Check the status of your
+                        internship applications.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 College Internship Management System
+        </p>
+
+    </footer>
+
+</body>
+</html>

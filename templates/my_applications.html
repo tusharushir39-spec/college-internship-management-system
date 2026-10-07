@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Applications</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .status {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .approved {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .rejected {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Internship Portal
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/internships">Internships</a>
+
+        <a href="/my-applications">My Applications</a>
+
+        <a href="/logout">Logout</a>
+
+    </div>
+
+</nav>
+
+
+<section class="features">
+
+    <h2>My Applications</h2>
+
+    <div class="feature-container">
+
+        {% for application in applications %}
+
+        <div class="feature-card">
+
+            <h3>
+                {{ application[1] }}
+            </h3>
+
+            <p>
+                <strong>Company:</strong>
+                {{ application[2] }}
+            </p>
+
+            <p>
+                <strong>Applied Date:</strong>
+                {{ application[3] }}
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+
+                {% if application[4] == "Approved" %}
+
+                <span class="status approved">
+                    🟢 Approved
+                </span>
+
+                {% elif application[4] == "Rejected" %}
+
+                <span class="status rejected">
+                    🔴 Rejected
+                </span>
+
+                {% else %}
+
+                <span class="status pending">
+                    🟡 Pending
+                </span>
+
+                {% endif %}
+
+            </p>
+
+        </div>
+
+        {% else %}
+
+        <div class="feature-card">
+
+            <h3>
+                No Applications
+            </h3>
+
+            <p>
+                You have not applied for any internship yet.
+            </p>
+
+            <br>
+
+            <a href="/internships"
+               class="btn btn-primary">
+
+                Browse Internships
+
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 College Internship Management System
+    </p>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apply for Internship</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Internship Portal
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/internships">Internships</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Apply for Internship</h1>
+
+            <h2>{{ internship[2] }}</h2>
+
+            <p>
+                <strong>Student:</strong>
+                {{ student_name }}
+            </p>
+
+            <p>
+                <strong>Company:</strong>
+                {{ internship[1] }}
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                {{ internship[3] }}
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                {{ internship[4] }}
+            </p>
+
+            <p>
+                <strong>Stipend:</strong>
+                {{ internship[5] }}
+            </p>
+
+            <p>
+                <strong>Skills:</strong>
+                {{ internship[6] }}
+            </p>
+
+            <br>
+
+            <form method="POST" action="/submit-application/{{ internship[0] }}">
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Submit Application
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

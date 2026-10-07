@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Internship Portal - Admin
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/internships">Internships</a>
+
+        <a href="/admin-logout">Logout</a>
+
+    </div>
+
+</nav>
+
+
+<section class="features">
+
+    <h2>Admin Dashboard</h2>
+
+    <p>Welcome Admin 👨‍💼</p>
+
+    <div class="feature-container">
+
+        <div class="feature-card">
+
+            <h3>👨‍🎓 Students</h3>
+
+            <p>
+                Total Students
+            </p>
+
+            <h2>
+                {{ total_students }}
+            </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>💼 Internships</h3>
+
+            <p>
+                Total Internships
+            </p>
+
+            <h2>
+                {{ total_internships }}
+            </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>📋 Applications</h3>
+
+            <p>
+                Total Applications
+            </p>
+
+            <h2>
+                {{ total_applications }}
+            </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h3>⏳ Pending</h3>
+
+            <p>
+                Pending Applications
+            </p>
+
+            <h2>
+                {{ pending_applications }}
+            </h2>
+
+        </div>
+
+
+        <a href="/admin-applications"
+           style="text-decoration: none; color: inherit;">
+
+            <div class="feature-card">
+
+                <h3>📋 Manage Applications</h3>
+
+                <p>
+                    View, approve and reject
+                    student applications.
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <a href="/add-internship"
+           style="text-decoration: none; color: inherit;">
+
+            <div class="feature-card">
+
+                <h3>➕ Add Internship</h3>
+
+                <p>
+                    Add new internship opportunities
+                    for students.
+                </p>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 College Internship Management System
+    </p>
+
+</footer>
+
+</body>
+
+</html>
