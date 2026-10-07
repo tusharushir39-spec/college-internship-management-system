@@ -49,18 +49,24 @@ def init_db():
     connection.close()
 
 
+init_db()
+
+
 @app.route("/")
 def home():
+
     return render_template("index.html")
 
 
 @app.route("/about")
 def about():
+
     return render_template("about.html")
 
 
 @app.route("/contact")
 def contact():
+
     return render_template("contact.html")
 
 
@@ -140,6 +146,7 @@ def login():
 def dashboard():
 
     if "student_id" not in session:
+
         return redirect("/login")
 
     connection = sqlite3.connect("internship.db")
@@ -192,6 +199,7 @@ def internships():
 def add_internship():
 
     if "admin" not in session:
+
         return redirect("/admin-login")
 
     if request.method == "POST":
@@ -231,6 +239,7 @@ def add_internship():
 def edit_internship(internship_id):
 
     if "admin" not in session:
+
         return redirect("/admin-login")
 
     connection = sqlite3.connect("internship.db")
@@ -293,6 +302,7 @@ def edit_internship(internship_id):
 def delete_internship(internship_id):
 
     if "admin" not in session:
+
         return redirect("/admin-login")
 
     connection = sqlite3.connect("internship.db")
@@ -317,6 +327,7 @@ def delete_internship(internship_id):
 def apply(internship_id):
 
     if "student_id" not in session:
+
         return redirect("/login")
 
     connection = sqlite3.connect("internship.db")
@@ -343,6 +354,7 @@ def apply(internship_id):
 def submit_application(internship_id):
 
     if "student_id" not in session:
+
         return redirect("/login")
 
     student_id = session["student_id"]
@@ -390,6 +402,7 @@ def submit_application(internship_id):
 def my_applications():
 
     if "student_id" not in session:
+
         return redirect("/login")
 
     student_id = session["student_id"]
@@ -442,6 +455,7 @@ def admin_login():
 def admin_dashboard():
 
     if "admin" not in session:
+
         return redirect("/admin-login")
 
     connection = sqlite3.connect("internship.db")
@@ -477,6 +491,7 @@ def admin_dashboard():
 def admin_applications():
 
     if "admin" not in session:
+
         return redirect("/admin-login")
 
     connection = sqlite3.connect("internship.db")
@@ -512,6 +527,7 @@ def admin_applications():
 def approve_application(application_id):
 
     if "admin" not in session:
+
         return redirect("/admin-login")
 
     connection = sqlite3.connect("internship.db")
@@ -532,6 +548,7 @@ def approve_application(application_id):
 def reject_application(application_id):
 
     if "admin" not in session:
+
         return redirect("/admin-login")
 
     connection = sqlite3.connect("internship.db")
@@ -557,7 +574,5 @@ def admin_logout():
 
 
 if __name__ == "__main__":
-
-    init_db()
 
     app.run(debug=True)
