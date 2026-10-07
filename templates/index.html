@@ -1,86 +1,176 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>College Internship Management System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
 
 <body>
 
     <nav class="navbar">
-        <div class="logo">Internship Portal</div>
+
+        <div class="logo">
+            Internship Portal
+        </div>
 
         <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="#">Internships</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/internships">
+                Internships
+            </a>
+
+            <a href="/about">
+                About
+            </a>
+
+            <a href="/contact">
+                Contact
+            </a>
+
         </div>
+
     </nav>
+
 
     <section class="hero">
 
         <div class="hero-text">
 
-            <h1>College Internship Management System</h1>
+            <h1>
+                College Internship Management System
+            </h1>
 
-            <h2>Find the Right Internship for Your Career</h2>
+            <h2>
+                Find the Right Internship for Your Career
+            </h2>
 
             <p>
                 Discover internship opportunities, apply for internships
                 and track your application status easily in one place.
             </p>
 
+
             <div class="buttons">
-                <a href="#" class="btn btn-primary">Student Login</a>
-                <a href="#" class="btn btn-secondary">Register</a>
+
+                <a href="/login"
+                   class="btn btn-primary">
+
+                    Student Login
+
+                </a>
+
+
+                <a href="/register"
+                   class="btn btn-secondary">
+
+                    Register
+
+                </a>
+
             </div>
 
         </div>
 
+
         <div class="hero-box">
-            <h2>🎓<br>Build Your Career<br>With Internships</h2>
+
+            <h2>
+
+                🎓
+                <br>
+
+                Build Your Career
+                <br>
+
+                With Internships
+
+            </h2>
+
         </div>
 
     </section>
 
+
     <section class="features">
 
-        <h2>What You Can Do</h2>
+        <h2>
+            What You Can Do
+        </h2>
+
+
+        <p>
+            Explore internship opportunities and manage your applications easily.
+        </p>
+
 
         <div class="feature-container">
 
+
             <div class="feature-card">
-                <h3>🔍 Find Internships</h3>
+
+                <h3>
+                    🔍 Find Internships
+                </h3>
+
                 <p>
                     Explore available internship opportunities
                     suitable for your skills and interests.
                 </p>
+
             </div>
 
+
             <div class="feature-card">
-                <h3>📝 Apply Online</h3>
+
+                <h3>
+                    📝 Apply Online
+                </h3>
+
                 <p>
                     Apply for internships easily through
                     the online application system.
                 </p>
+
             </div>
 
+
             <div class="feature-card">
-                <h3>📊 Track Applications</h3>
+
+                <h3>
+                    📊 Track Applications
+                </h3>
+
                 <p>
                     Check your application status and
                     keep track of your internship applications.
                 </p>
+
             </div>
+
 
         </div>
 
     </section>
 
+
     <footer>
-        <p>© 2026 College Internship Management System</p>
+
+        <p>
+            © 2026 College Internship Management System
+        </p>
+
     </footer>
 
+
 </body>
+
 </html>
